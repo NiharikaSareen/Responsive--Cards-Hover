@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+.card-container{
+  display: flex;
+  justify-content: center;
+}
+.card {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  margin: 10px;
+  max-width: 310px;
+  min-width: 250px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.card * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.card img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+  opacity: 0.75;
+}
+
+.card figcaption {
+  padding: 25px 20px 25px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  opacity:0;
+}
+
+.card .date {
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+  font-weight: 800;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 10px 0;
+  position: absolute;
+  right: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.card .date span {
+  display: block;
+  line-height: 14px;
+}
+
+.card .date .month {
+  font-size: 11px;
+}
+
+.card h3,
+.card p {
+  margin: 0;
+  padding: 0;
+}
+
+.card h3 {
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.card .hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  opacity:.30;
+background: #42275a;  
+background: -webkit-linear-gradient(to right, rgba(115, 75, 109, 0.75), rgba(66, 39, 90, 0.75));  
+background: linear-gradient(to right, rgba(115, 75, 109, 0.70), rgba(66, 39, 90, 0.75)); 
+  display: flex;
+  font-size: 65px;
+  justify-content: center;
+  opacity: 0;
+}
+
+.card a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.card:hover .hover,
+.card.hover .hover {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  opacity: 1;
+}
+
+.card:hover figcaption,
+.card.hover figcaption {
+  opacity: 1;
+}
+
+.card:hover .date,
+.card.hover .date {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+
+body {
+  background-color: #212121;
+}
+@media all and (max-width: 40em) {
+  .card-container {
+  display: block;
+  }
+  .card{
+    margin: 10px auto;
+  }
+}
